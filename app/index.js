@@ -18,7 +18,7 @@ const printFact = (data, factList) => {
   let facts =  `<div class="container border mt-3 p-3"> 
                 <img src="https://source.unsplash.com/300x300/?animals,cat" alt="cats" class="rounded-circle w-25 mt-3">
                 <h5 class='col-12 mt-4'>${catFact}</h5>
-                <button class="btn btn-info refresh-button">Change this fact</button>
+                <button class="btn btn-secondary refresh-button">Change this fact</button>
                 </div>`
   factList.insertAdjacentHTML("beforeend", facts);
 }
@@ -28,7 +28,7 @@ const refreshFact = (data, factRefresh) => {
   let facts = `<div class="container border mt-3 p-3"> 
                 <img src="https://source.unsplash.com/300x300/?animals,cat" alt="cats" class="rounded-circle w-25 mt-3">
                 <h5 class='col-12 mt-4'>${catFact}</h5>
-                <button class="btn btn-info refresh-button">Change this fact</button>
+                <button class="btn btn-secondary refresh-button">Change this fact</button>
                 </div>`
   factRefresh.outerHTML = facts;
 }

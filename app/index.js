@@ -1,20 +1,3 @@
-const express = require('express');
-const favicon = require('express-favicon');
-const path = require('path');
-const port = process.env.PORT || 8080;
-const app = express();
-app.use(favicon(__dirname + '/build/favicon.ico'));
-// the __dirname is the current directory from where the script is running
-app.use(express.static(__dirname));
-app.use(express.static(path.join(__dirname, 'build')));
-app.get('/ping', function (req, res) {
-  return res.send('pong');
-});
-app.get('/*', function (req, res) {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
-});
-app.listen(port);
-
 const url = "https://cat-fact.herokuapp.com/facts"
 const url2 = "https://cors-anywhere.herokuapp.com/"
 
@@ -35,7 +18,7 @@ const printFact = (data, factList) => {
   let facts =  `<div class="container border mt-3 p-3"> 
                 <img src="https://source.unsplash.com/300x300/?animals,cat" alt="cats" class="rounded-circle w-25 mt-3">
                 <h5 class='col-12 mt-4'>${catFact}</h5>
-                <button class="btn btn-primary refresh-button">Change this fact</button>
+                <button class="btn btn-info refresh-button">Change this fact</button>
                 </div>`
   factList.insertAdjacentHTML("beforeend", facts);
 }
@@ -45,7 +28,7 @@ const refreshFact = (data, factRefresh) => {
   let facts = `<div class="container border mt-3 p-3"> 
                 <img src="https://source.unsplash.com/300x300/?animals,cat" alt="cats" class="rounded-circle w-25 mt-3">
                 <h5 class='col-12 mt-4'>${catFact}</h5>
-                <button class="btn btn-primary refresh-button">Change this fact</button>
+                <button class="btn btn-info refresh-button">Change this fact</button>
                 </div>`
   factRefresh.outerHTML = facts;
 }

@@ -3,7 +3,6 @@ dist
 .DS_Store
 package-lock.json
 yarn-error.log
-src/*
 public/*
 build/static/css/*.map
 build/static/js/*.map

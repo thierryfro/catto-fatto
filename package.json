@@ -1,3 +1,7 @@
+"scripts": {
+  "start": "node server.js"
+}
+
 {
   "name": "javascript-101",
   "version": "1.0.0",
